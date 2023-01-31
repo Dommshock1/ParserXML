@@ -7,6 +7,8 @@ import time
 from tqdm.autonotebook import tqdm
 from functools import partial
 import glob
+import tkinter as tk
+from tkinter import filedialog as fd 
 
 class ParserXML:
     
@@ -73,10 +75,12 @@ def parseXML(useMultiprocessing, inputFilePath, outputFilePath, outputFormat, ma
     saveFile(df, outputFilePath, outputFormat)
 
 if __name__ == '__main__':
-    
-    inputFilePath = 'C:\\Users\\User1\\Desktop\\NCT0000xxxx\\'
-    outputFilePath = 'C:\\Users\\User1\\Desktop\\Output_file'
+     
     outputFormat = 'csv'
+    inputFilePath= fd.askdirectory(title=f'Выберите директорию в которой находятся XML файлы') 
+    outputFilePath= fd.askdirectory(title=f'Выберите директорию для сохранения файла резульата "Output_file.{outputFormat}"') 
+    outputFilePath = f'{outputFilePath}/Output_file'
+    
     maxLen = 11
     useMultiprocessing = True
     
