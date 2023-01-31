@@ -74,7 +74,7 @@ def parseXML(useMultiprocessing, inputFilePath, outputFilePath, outputFormat, ma
 
 if __name__ == '__main__':
     
-    inputFilePath = 'C:\\Users\\dom\\Downloads\\AllPublicXML\\'
+    inputFilePath = 'C:\\Users\\User1\\Desktop\\NCT0000xxxx\\'
     outputFilePath = 'file_111'
     outputFormat = 'csv'
     maxLen = 11
