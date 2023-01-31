@@ -86,7 +86,6 @@ if __name__ == '__main__':
     
     parseXML(useMultiprocessing, inputFilePath, outputFilePath, outputFormat, maxLen)
     
-    a= 1
     
 
    
